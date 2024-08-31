@@ -34,7 +34,7 @@ root.render(
           </a>{" "}
           and{" "}
           <a
-            href="https://app.netlify.com/sites/2react-weather-app/"
+            href="https://2react-weather-app.netlify.app/"
             rel="noreferrer"
             target="_blank"
           >
