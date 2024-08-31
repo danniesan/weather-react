@@ -26,14 +26,18 @@ root.render(
           </a>{" "}
           and is{" "}
           <a
-            href="https://github.com/danniesan/weather-app-react.git"
+            href="https://github.com/danniesan/weather-react.git"
             rel="noreferrer"
             target="_blank"
           >
             on GitHub
           </a>{" "}
           and{" "}
-          <a href="#" rel="noreferrer" target="_blank">
+          <a
+            href="https://app.netlify.com/sites/2react-weather-app/"
+            rel="noreferrer"
+            target="_blank"
+          >
             hosted on Netlify
           </a>
         </p>
