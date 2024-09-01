@@ -1,48 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./Style.css";
-import "./index.css";
+import "bootstrap/dist/css/bootstrap.css";
 import reportWebVitals from "./reportWebVitals";
-import SearchEngine from "./WeatherSearch";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="container">
-      <div className="App">
-        <h1>Weather App</h1>
-        <SearchEngine />
-      </div>
-
-      <footer>
-        <p class="footer">
-          This project was coded by{" "}
-          <a
-            href="https://github.com/danniesan"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Veronica Sandoval
-          </a>{" "}
-          and is{" "}
-          <a
-            href="https://github.com/danniesan/weather-react.git"
-            rel="noreferrer"
-            target="_blank"
-          >
-            on GitHub
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://2react-weather-app.netlify.app/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            hosted on Netlify
-          </a>
-        </p>
-      </footer>
-    </div>
+    <App />
   </React.StrictMode>
 );
 
