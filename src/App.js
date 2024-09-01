@@ -1,13 +1,14 @@
-import SearchEngine from "./WeatherSearch";
+import React from "react";
 import "./index.css";
-import "./Style.css";
+
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <h1>Weather App</h1>
-        <SearchEngine />
+        <Weather />
 
         <footer>
           <p class="footer">
