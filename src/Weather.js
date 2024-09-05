@@ -1,26 +1,24 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 import "./weather.css";
 import "./index.css";
 
 export default function Weather() {
-  const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState({ submit: false });
 
   function handleSubmit(response) {
     setWeatherData({
       submit: true,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
-  }
-  function updateCity(event) {
-    setCity(event.target.value);
   }
 
   if (weatherData.submit) {
@@ -33,7 +31,7 @@ export default function Weather() {
                 className="search-input"
                 type="search"
                 placeholder="Enter a city..."
-                onChange={updateCity}
+                onChange={weatherData.city}
                 autoFocus="on"
               />
             </div>
@@ -44,7 +42,9 @@ export default function Weather() {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>Wdnesday 07:00</li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
@@ -74,7 +74,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "aca4dd3643b89e94dbd3cac6cf6f2638";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${weatherData.city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleSubmit);
     return <div>Loading...</div>;
   }
