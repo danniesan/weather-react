@@ -41,6 +41,7 @@ h1 {
 .Weather canvas {
   margin-right: 5px;
   display: inline-block;
+  float: left;
 }
 .Weather .temperature {
   color: rgb(33, 33, 33);
