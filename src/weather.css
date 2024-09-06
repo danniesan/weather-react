@@ -38,12 +38,9 @@ h1 {
   line-height: 29px;
   margin: 20px 0 0 0;
 }
-.Weather img {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
+.Weather canvas {
+  margin-right: 5px;
   display: inline-block;
-  margin-bottom: 20px;
 }
 .Weather .temperature {
   color: rgb(33, 33, 33);
