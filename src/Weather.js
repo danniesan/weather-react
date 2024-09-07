@@ -7,13 +7,13 @@ import "./weather.css";
 import "./index.css";
 
 export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ submit: false });
-  const [city, setCity] = useState(props.defaultCity);
+  let [weatherData, setWeatherData] = useState({ loaded: false });
+  let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
-      submit: true,
-      coordinates: response.data.coord,
+      loaded: true,
+      coordinates: response.data.coordinates,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
@@ -25,7 +25,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
+    const apiKey = "58a6775f97527351bf6c6966e209be39";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -38,7 +38,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  if (weatherData.submit) {
+  if (weatherData.loaded) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>

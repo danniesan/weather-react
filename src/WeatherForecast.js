@@ -31,11 +31,10 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    const apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
+    const apiKey = "58a6775f97527351bf6c6966e209be39";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
-    let apiUrl = ` https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}
-      &exclude={part}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return null;
   }
