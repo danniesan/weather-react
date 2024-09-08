@@ -28,13 +28,8 @@ form {
   height: 50px;
   color: #fff;
 }
-
-h1 {
-  font-size: 40px;
-  line-height: 0.5;
-}
 .Weather h1 {
-  font-size: 24px;
+  font-size: 40px;
   line-height: 29px;
   margin: 20px 0 0 0;
 }
@@ -58,7 +53,8 @@ h1 {
   line-height: 1;
 }
 .Weather ul {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   padding: 0;
 }
 .Weather li {
