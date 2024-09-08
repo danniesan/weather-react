@@ -1,6 +1,6 @@
 .Weather {
   border: 1px solid #dadde1;
-  color: rgb(135, 135, 135);
+  color: #005792;
   padding: 16px;
   margin: 30px auto;
   max-width: 800px;
@@ -13,7 +13,7 @@ form {
 .search-input {
   display: inline-block;
   border: none;
-  background: #f8f5fd;
+  background: rgba(227, 242, 255, 0.5);
   padding: 13px 25px;
   line-height: 20px;
   height: 50px;
@@ -23,7 +23,7 @@ form {
   font-size: 15px;
   border: none;
   border-radius: 5px;
-  background: #a788f5;
+  background: #0092ca;
   padding: 10px 20px;
   height: 50px;
   color: #fff;
@@ -58,11 +58,14 @@ h1 {
   line-height: 1;
 }
 .Weather ul {
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 .Weather li {
   font-size: 16px;
   line-height: 19px;
   list-style: none;
+}
+.float-left {
+  float: left;
 }
